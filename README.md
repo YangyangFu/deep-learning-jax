@@ -1,2 +1,2 @@
-# deep-learning-notes
-Deep learning notes
+# Deep Learning in Jax
+
