@@ -1,14 +1,14 @@
-# Neural Style Transfer
+# 6. Neural Style Transfer
 
 Given a content image and a style image, neural style transfer generates a new image that is the content of the content image and the style of the style image.
 For example, make your own photo (content image) like a Van Gogh (style image) painting.
 
-## What does ConvNet learn?
+## 6.1 What does ConvNet learn?
 - visualize the layer in a ConvNet
     - the shallower layers learn simple features, such as edges and simple textures
     - the deeper layers learn complex features, such as complex textures and object parts
 
-## Cost Function
+## 6.2 Cost Function
 
 - Cost function: content cost function + style cost function
   - For a content image C, and a style image S, the generated image is G

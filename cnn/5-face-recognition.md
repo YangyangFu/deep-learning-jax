@@ -1,4 +1,4 @@
-# Face Recognition
+# 5. Face Recognition
 
 - face verification: is this the claimed person? 1 on 1
 - face recognition: who is this person? 1 on K
@@ -7,13 +7,13 @@ For face recognition, the traditional supervised learning approach won't work we
 - the number of classes is too large, and the number of training examples per class is too small.
 - for application, such as company security, the number of classes is not fixed as new employees join the company. We cannot retrain the model every time a new employee joins the company.
   
-## One Shot Learning
+## 5.1 One Shot Learning
 
 - one shot learning: one training example of each person
   - typical supervised learning: 100s of examples of each person
 - learn a "similarity" function: d(img1, img2) = degree of difference between images 
 
-## Siamese Network
+## 5.2 Siamese Network
 
 - Siamese Network: a neural network that takes two inputs and outputs a similarity score
   - run two identical neural networks that share the same parameters and weights for two different inputs
@@ -56,7 +56,7 @@ flowchart LR
   - testing set
     - 1 picture of each person
 
-## Face Verification and Binary Classification
+## 5.3 Face Verification and Binary Classification
 The above Siamese Network can be used for face verification, i.e., given two images, determine whether they are the same person or not. The output of the Siamese Network is a similarity score, and we can set a threshold to determine whether the two images are the same person or not. This is a binary classification problem.
 
 We do this by adding a logistic regression layer on top of the Siamese Network. The logistic regression layer takes the output of the Siamese Network as input and outputs a probability of the two images being the same person. The logistic regression layer is trained on the training set of the Siamese Network.
